@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+
+  <body>
+
+    <h2>
+      We played <%= @user_choice %>!
+    </h2>
+    <h2>
+      They played <%= @computer_choice %>!
+    </h2>
+    <% if @user_choice == @computer_choice %>
+      <h2>We tied!</h2>
+    <% elsif (@user_choice == 'rock' and @computer_choice=='paper') or (@user_choice == 'paper' and @computer_choice=='scissors') or (@user_choice == 'scissors' and @computer_choice=='rock')%>
+      <h2>We lost!</h2>
+    <% elsif (@user_choice == 'rock' and @computer_choice=='scissors') or (@user_choice == 'paper' and @computer_choice=='rock') or (@user_choice == 'scissors' and @computer_choice=='paper')%>
+      <h2>We won!</h2>
+    <% else %>
+    <% end %>
+    <a href='/'>Rules</a>
+
+  </body>
+</html>
